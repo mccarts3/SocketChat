@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+* { 
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+}
+
+body { 
+	font: 16px Helvetica, Arial; 
+}
+
+.menuBar {
+	background: #777;
+}
+
+.menuBar a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+.menuBar li {
+	color: #fff;
+	font: 20px Arial;
+	padding: 5px 10px 5px 10px;
+	list-style-type: none;
+}
+
+.menuBar li:hover {
+	background: #aaa;
+}
+
+.chatApp {
+	width: 80%;
+	padding-top: 20px;
+	margin:auto;
+}
+
+form { 
+	background: #000; 
+	padding: 3px; 
+	position: fixed; 
+	bottom: 0;
+	width: 100%; 
+	word-wrap: break-word;
+}
+
+form input { 
+	border: 0; 
+	padding: 10px;
+	width: 70%; 
+	margin-right: .5%; 
+}
+
+form button { 
+	width: 10%; 
+	background: #50b4ff; 
+	border: none; 
+	padding: 10px; 
+}
+
+form button:hover {
+	background: #82E0FF;	 
+}
+
+#messages { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	word-wrap: break-word;
+}
+
+#messages li { 
+	padding: 5px 10px; 
+}
+
+#messages li:nth-child(odd) { 
+	background: #eee; 
+}
+
+#usrConn {	
+	font-weight: bold;	
+	text-indent: 15px;	
+	font-family: Courier;	
+}
