@@ -8,14 +8,18 @@ $('form').submit(function(){
 });
 
 socket.on('connect', function() {
-	//username = prompt("Please enter a username.").substr(0, 20);
+	//username = prompt("Please enter a username.");
+	if(username != null) { username.substr(0, 20).trim();	}
+	
 	if(username === null || username === "") {	username = "Anon";	}
 	
+	socket.emit('server_receive_username', username);
+});
+
+socket.on('user_connected', function(username) {
 	$('#messages').append($("<li id=\"usrConn\">").text(username + " has connected."));
 });
 
-socket.on('message', function(msg){	
-	var messageText = username + ": " + msg;
-	
-  $('#messages').append('<li><b>' + username + ': </b>' + msg + '</li>');
+socket.on('message', function(msg, user){	
+  $('#messages').append('<li><b>' + user + ': </b>' + msg + '</li>');
 });

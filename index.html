@@ -13,12 +13,17 @@
 	        <ul>
 	            <a href="#/home"><li>HOME</li></a>
 	            <a href="#/chat"><li>CHAT</li></a>
-	            <a href="#/about"><li>ABOUT ME</li></a>
-	            <a href="#/contact"><li>CONTACT ME</li></a>
+	            <a href="#/about"><li>ABOUT</li></a>
+	            <a href="#/contact"><li>CONTACT</li></a>
 	        </ul>
 	    </div>
 	    
-	    <div class="chatApp">
+	    <!-- <div id="username_field" style="visibility:hidden">
+		    	Username:
+		    	<input type="text" name="username_field" id="username_field">
+		</div> -->
+		 	
+	    <div class="chatApp">​
 			<ul id="messages"></ul>
 			<form action="">
 				<input id="m" autocomplete="off" /><button>Send</button>
@@ -28,4 +33,17 @@
 			<script id="chatLog" src="/scripts/chat.js"></script>
 		</div>
 	</body>
+	<script>
+		$(document).ready(function() {
+			$("username_field").show();
+			$("chatApp").hide();
+			var uN = " ";
+			uN = $("username_field").val();
+			
+			if(uN != null) {
+				$("username_field").hide();
+				$("chatApp").show();
+			}
+		});
+	</script>
 </html>

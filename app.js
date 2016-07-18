@@ -4,6 +4,8 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var path = require('path');
+//var redis = require('socket.io-redis');
+//io.adapter(redis({ host: 'localhost', port: 6379 }));
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
@@ -14,13 +16,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 var usernames = {};
 
 io.on('connection', function(socket){
-	socket.on('addUser', function(username) {
-		socket.username = username;
-		usernames[username] = username;
-	});
-	
 	io.emit('connect');
 	
+	socket.on('server_receive_username', function(username) {		
+		io.emit('user_connected', username);
+	});
+
   socket.on('message', function(msg){
   	io.emit('message', msg);
   });
