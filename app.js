@@ -10,7 +10,7 @@ app.get('/', function(req, res){
 });
 app.use(express.static(path.join(__dirname, 'public')));
 
-//usernames which are currently connected to the chat
+// Usernames which are currently connected to the chat
 var usernames = {};
 
 io.on('connection', function(socket){
