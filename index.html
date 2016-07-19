@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    
 		<title>Socket.io | Chat Example</title>
+		
 		<link rel="stylesheet" type="text/css" href="/css/theme.css">
-		<link rel="icon" href="/assets/icons/superS.png">	
+		<link rel="icon" href="/icons/superS.png">	
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="/bower_components/angular/angular.min.js"></script>
+		<script src="/bower_components/angular-route/angular-route.min.js"></script>
+		<script src="/indexAngular.js"></script>
 	</head>
 	
 	<!-- HTML Body -->	
@@ -18,32 +29,10 @@
 	        </ul>
 	    </div>
 	    
-	    <!-- <div id="username_field" style="visibility:hidden">
-		    	Username:
-		    	<input type="text" name="username_field" id="username_field">
-		</div> -->
-		 	
-	    <div class="chatApp">​
-			<ul id="messages"></ul>
-			<form action="">
-				<input id="m" autocomplete="off" /><button>Send</button>
-			</form>
-			<script src="/socket.io/socket.io.js"></script>
-			<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-			<script id="chatLog" src="/scripts/chat.js"></script>
+		<div id="col-right" class="col-right ">
+			<div class="container-fluid primary-content">			
+				<div ng-view></div>
+			</div>
 		</div>
 	</body>
-	<script>
-		$(document).ready(function() {
-			$("username_field").show();
-			$("chatApp").hide();
-			var uN = " ";
-			uN = $("username_field").val();
-			
-			if(uN != null) {
-				$("username_field").hide();
-				$("chatApp").show();
-			}
-		});
-	</script>
 </html>

@@ -1,0 +1,26 @@
+<div class="chatApp">
+	<!-- <div id="username_field" style="visibility:hidden">
+	    	Username:
+	    	<input type="text" name="username_field" id="username_field">
+	</div> -->​
+	<ul id="messages"></ul>
+	<form action="">
+		<input id="m" autocomplete="off" /><button>Send</button>
+	</form>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<script id="chatLog" src="scripts/chat.js"></script>
+</div>
+<!-- <script>
+	$(document).ready(function() {
+		$("username_field").show();
+		$("chatApp").hide();
+		var uN = " ";
+		uN = $("username_field").val();
+		
+		if(uN != null) {
+			$("username_field").hide();
+			$("chatApp").show();
+		}
+	});
+</script> -->
