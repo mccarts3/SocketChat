@@ -9,17 +9,15 @@
 		
 		<link rel="stylesheet" type="text/css" href="/css/theme.css">
 		<link rel="icon" href="/icons/superS.png">	
-		<link href="css/bootstrap.min.css" rel="stylesheet">
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="/bower_components/angular/angular.min.js"></script>
-		<script src="/bower_components/angular-route/angular-route.min.js"></script>
+		
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<script src="/indexAngular.js"></script>
 	</head>
 	
 	<!-- HTML Body -->	
-	<body>
+	<body class="fixed-top-active" ng-app="app">
 		<div class="menuBar">
 	        <ul>
 	            <a href="#/home"><li>HOME</li></a>
@@ -27,12 +25,7 @@
 	            <a href="#/about"><li>ABOUT</li></a>
 	            <a href="#/contact"><li>CONTACT</li></a>
 	        </ul>
-	    </div>
-	    
-		<div id="col-right" class="col-right ">
-			<div class="container-fluid primary-content">			
-				<div ng-view></div>
-			</div>
-		</div>
+	    </div>		
+		<div ng-view></div>
 	</body>
 </html>

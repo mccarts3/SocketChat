@@ -36,9 +36,9 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/home.html');
 });
 
-// [STATIC ROUTE DEFINITIONS]
+//[STATIC ROUTE DEFINITIONS]
 app.use(express.static('public'));
-app.use('/bower_components', express.static('bower_components'));
+app.use('/bower_components', express.static('bower_components'));;
 
 http.listen(3000, function(){
   console.log('listening on *:3000');
