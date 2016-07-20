@@ -12,8 +12,10 @@
 		
 		
 		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="/angular-route/angular-route.min.js"></script>
 		<script src="/indexAngular.js"></script>
+		-->
 	</head>
 	
 	<!-- HTML Body -->	
@@ -26,6 +28,20 @@
 	            <a href="#/contact"><li>CONTACT</li></a>
 	        </ul>
 	    </div>		
-		<div ng-view></div>
+		<!-- <div ng-view></div>	 -->
+		<script src="/scripts/chat.js"></script>
+		<div class="chatApp">
+			<!-- <div id="username_field" style="visibility:hidden">
+			    	Username:
+			    	<input type="text" name="username_field" id="username_field">
+			</div> -->​
+			<ul id="messages"></ul>
+			<form action="">
+				<input id="m" autocomplete="off" /><button>Send</button>
+			</form>
+			<script src="/socket.io/socket.io.js"></script>
+			<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+			<script id="chatLog" src="scripts/chat.js"></script>
+		</div>
 	</body>
 </html>
