@@ -30,6 +30,19 @@ body {
 	background: #aaa;
 }
 
+.welcomeScreen {
+	width:100%;
+	padding-top: 20px;
+	font: 24px Helvetica, Arial;	
+}
+
+#usernameInput {
+	padding: 5px 0px 5px 0px;
+	margin: auto;
+	height: 40px;
+	width: 400px;
+}
+
 .chatApp {
 	width: 80%;
 	padding-top: 20px;
