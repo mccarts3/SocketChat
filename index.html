@@ -27,20 +27,22 @@
 	            <a href="#/about"><li>ABOUT</li></a>
 	            <a href="#/contact"><li>CONTACT</li></a>
 	        </ul>
-	    </div>		
+	    </div>	
+	    	
 		<!-- <div ng-view></div>	 -->
-		<script src="/scripts/chat.js"></script>
-		<div class="chatApp">
-			<!-- <div id="username_field" style="visibility:hidden">
-			    	Username:
-			    	<input type="text" name="username_field" id="username_field">
-			</div> -->​
+		<!-- What should be included chat.html -->
+		 
+		<div class="welcomeScreen">
+			<input type="text" tabindex="0" autofocus placeholder="Enter username: " id="usernameInput" maxlength="20" />
+		</div>
+		
+		<div class="chatApp">​
 			<ul id="messages"></ul>
 			<form action="">
 				<input id="m" autocomplete="off" /><button>Send</button>
 			</form>
-			<script src="/socket.io/socket.io.js"></script>
 			<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+			<script src="/socket.io/socket.io.js"></script>
 			<script id="chatLog" src="scripts/chat.js"></script>
 		</div>
 	</body>

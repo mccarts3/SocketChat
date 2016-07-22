@@ -4,16 +4,16 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var path = require('path');
-//var redis = require('socket.io-redis');
-//io.adapter(redis({ host: 'localhost', port: 6379 }));
 
-app.get('/', function(req, res){
-  res.sendFile(__dirname + '/index.html');
-});
-app.use(express.static(path.join(__dirname, 'public')));
+var username = document.getElementById('username');
+var socket;
 
-// Usernames which are currently connected to the chat
-var usernames = {};
+var users = [];
+
+window.onload = function() {
+	// Set/check values using 
+	//    var asdf = document.getElementById('asdf');
+}
 
 io.on('connection', function(socket){
 	io.emit('connect');
