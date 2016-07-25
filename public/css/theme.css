@@ -36,6 +36,11 @@ body {
 	font: 24px Helvetica, Arial;	
 }
 
+.welcomeScreen span {
+	width: 50%;
+	padding: 5px 0px 5px 30%;
+}
+
 #usernameInput {
 	padding: 5px 0px 5px 0px;
 	margin: auto;

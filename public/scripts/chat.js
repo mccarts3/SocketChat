@@ -3,7 +3,7 @@ var username = "";
 var socketID = 0;
 
 $('form').submit(function(){
-  socket.emit('new_message', {id: socketID, msg: $('#m').val()});
+  socket.emit('new_message', {id: socketID, message: $('#m').val()});
   $('#m').val('');
   return false;
 });
