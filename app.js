@@ -5,26 +5,23 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var path = require('path');
 
-//var username = document.getElementById('username');
 var socket;
 
 var users = [];
-var username = "Default";
-
-//window.onload = function() {
-//	// Set/check values using 
-//	//    var asdf = document.getElementById('asdf');
-//}
+var numUsers = 0;
 
 io.on('connection', function(socket){
 	io.emit('connect');
 	
-	socket.on('server_receive_username', function(username) {		
-		io.emit('user_connected', username);
+	socket.on('server_receive_username', function(uName) {
+		users.push({id: numUsers, username: uName});
+		console.log(users[numUsers]);
+		numUsers++;
+		io.emit('user_connected', users[numUsers-1]);
 	});
 
-  socket.on('message', function(msg){
-  	io.emit('message', {user: username, message: msg});
+  socket.on('new_message', function(messageInfo){
+  	io.emit('add_message', {user: users[messageInfo.id].username, message: messageInfo.message});
   });
   
 	socket.on('disconnect', function() {
