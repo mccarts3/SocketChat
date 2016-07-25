@@ -1,26 +1,50 @@
-<div class="chatApp">
-	<!-- <div id="username_field" style="visibility:hidden">
-	    	Username:
-	    	<input type="text" name="username_field" id="username_field">
-	</div> -->​
-	<ul id="messages"></ul>
-	<form action="">
-		<input id="m" autocomplete="off" /><button>Send</button>
-	</form>
-	<script src="/socket.io/socket.io.js"></script>
-	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-	<script id="chatLog" src="scripts/chat.js"></script>
-</div>
-<!-- <script>
-	$(document).ready(function() {
-		$("username_field").show();
-		$("chatApp").hide();
-		var uN = " ";
-		uN = $("username_field").val();
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    
+		<title>Socket.io | Chat Example</title>
 		
-		if(uN != null) {
-			$("username_field").hide();
-			$("chatApp").show();
-		}
-	});
-</script> -->
+		<link rel="stylesheet" type="text/css" href="/css/theme.css">
+		<link rel="icon" href="/icons/superS.png">	
+		
+		
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="/angular-route/angular-route.min.js"></script>
+		<script src="/indexAngular.js"></script>
+		-->
+	</head>
+	
+	<!-- HTML Body -->	
+	<body class="fixed-top-active" ng-app="app">
+		<div class="menuBar">
+	        <ul>
+	            <a href="#/home"><li>HOME</li></a>
+	            <a href="#/chat"><li>CHAT</li></a>
+	            <a href="#/about"><li>ABOUT</li></a>
+	            <a href="#/contact"><li>CONTACT</li></a>
+	        </ul>
+	    </div>	
+	    	
+		<!-- <div ng-view></div>	 -->
+		<!-- What should be included chat.html -->
+		 
+		<div class="welcomeScreen">
+			<span>Enter username: </span>
+			<input type="text" tabindex="0" autofocus id="usernameInput" maxlength="20" />
+		</div>
+		
+		<div class="chatApp">​
+			<ul id="messages"></ul>
+			<form action="">
+				<input id="m" autocomplete="off" /><button>Send</button>
+			</form>
+			<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+			<script src="/socket.io/socket.io.js"></script>
+			<script id="chatLog" src="scripts/chat.js"></script>
+		</div>
+	</body>
+</html>
