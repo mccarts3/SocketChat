@@ -5,15 +5,16 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var path = require('path');
 
-var username = document.getElementById('username');
+//var username = document.getElementById('username');
 var socket;
 
 var users = [];
+var username = "Default";
 
-window.onload = function() {
-	// Set/check values using 
-	//    var asdf = document.getElementById('asdf');
-}
+//window.onload = function() {
+//	// Set/check values using 
+//	//    var asdf = document.getElementById('asdf');
+//}
 
 io.on('connection', function(socket){
 	io.emit('connect');
@@ -23,7 +24,7 @@ io.on('connection', function(socket){
 	});
 
   socket.on('message', function(msg){
-  	io.emit('message', msg);
+  	io.emit('message', {user: username, message: msg});
   });
   
 	socket.on('disconnect', function() {
@@ -33,7 +34,9 @@ io.on('connection', function(socket){
 
 //[MAIN APP HTML ROUTE]
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/home.html');
+	var homePath = '/public/webpages/home.html';
+	var indexPath = '/index.html';
+  res.sendFile(__dirname + indexPath);
 });
 
 //[STATIC ROUTE DEFINITIONS]

@@ -20,6 +20,6 @@ socket.on('user_connected', function(username) {
 	$('#messages').append($("<li id=\"usrConn\">").text(username + " has connected."));
 });
 
-socket.on('message', function(msg, user){	
-  $('#messages').append('<li><b>' + user + ': </b>' + msg + '</li>');
+socket.on('message', function(messageInfo) {	
+  $('#messages').append('<li><b>' + messageInfo.user + ': </b>' + messageInfo.message + '</li>');
 });
