@@ -23,5 +23,5 @@ socket.on('user_connected', function(socket) {
 });
 
 socket.on('add_message', function(messageInfo) {	
-  $('#messages').append('<li><b>' + messageInfo.user + ': </b>' + messageInfo.message + '</li>');
+  $('#messages').append('<li><b>' + messageInfo.username + ': </b>' + messageInfo.message + '</li>');
 });
