@@ -24,4 +24,10 @@ socket.on('user_connected', function(socket) {
 
 socket.on('add_message', function(messageInfo) {	
   $('#messages').append('<li><b>' + messageInfo.username + ': </b>' + messageInfo.message + '</li>');
+  updateScroll();
 });
+
+function updateScroll() {
+  var element = document.getElementById("messages");
+  element.scrollTop = element.scrollHeight;
+}
