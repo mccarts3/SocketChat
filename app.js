@@ -48,9 +48,7 @@ io.on('connection', function(socket){
 	}); 
 
   socket.on('new_message', function(messageInfo){
-  	if(messageInfo.message !== null && messageInfo.message.trim !== "") {
   		io.emit('add_message', {username: users[messageInfo.id].username, message: messageInfo.message});
-  	}
   });
   
 	socket.on('disconnect', function() {
