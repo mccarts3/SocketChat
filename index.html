@@ -41,7 +41,7 @@
 			<div id="chatApp">​
 				<ul id="messages"></ul>
 				<form action="">
-					<input id="m" autocomplete="off" /><button>Send</button>
+					<input id="m" pattern=".{1,}" required title="1 character minimum" autocomplete="off" /><button>Send</button>
 				</form>
 				<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 				<script src="/socket.io/socket.io.js"></script>
