@@ -18,6 +18,7 @@ function addUser(username) {
 			console.log("Username is already taken. Assigning anonymous username...");
 		}
 	}
+	if(username === "Anon") {	userTaken = true;	}
 			
 	if(!userTaken) {	
 		users.push({id: numUsers, username: username});

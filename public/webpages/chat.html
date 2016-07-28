@@ -1,50 +1,16 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    
-		<title>Socket.io | Chat Example</title>
-		
-		<link rel="stylesheet" type="text/css" href="/css/theme.css">
-		<link rel="icon" href="/icons/superS.png">	
-		
-		
-		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-		<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-		<script src="/angular-route/angular-route.min.js"></script>
-		<script src="/indexAngular.js"></script>
-		-->
-	</head>
-	
-	<!-- HTML Body -->	
-	<body class="fixed-top-active" ng-app="app">
-		<div class="menuBar">
-	        <ul>
-	            <a href="#/home"><li>HOME</li></a>
-	            <a href="#/chat"><li>CHAT</li></a>
-	            <a href="#/about"><li>ABOUT</li></a>
-	            <a href="#/contact"><li>CONTACT</li></a>
-	        </ul>
-	    </div>	
-	    	
-		<!-- <div ng-view></div>	 -->
-		<!-- What should be included chat.html -->
-		 
-		<div class="welcomeScreen">
-			<span>Enter username: </span>
-			<input type="text" tabindex="0" autofocus id="usernameInput" maxlength="20" />
-		</div>
-		
-		<div class="chatApp">​
-			<ul id="messages"></ul>
-			<form action="">
-				<input id="m" autocomplete="off" /><button>Send</button>
-			</form>
-			<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-			<script src="/socket.io/socket.io.js"></script>
-			<script id="chatLog" src="scripts/chat.js"></script>
-		</div>
-	</body>
-</html>
+<div class="welcomeScreen">
+	<span>Enter username: </span>
+	<input type="text" tabindex="0" autofocus id="usernameInput" maxlength="20" />
+</div>
+
+<div id="chatWrapper">
+	<div id="chatApp">​
+		<ul id="messages"></ul>
+		<form action="">
+			<input id="m" pattern=".{1,}" required title="1 character minimum" autocomplete="off" /><button>Send</button>
+		</form>
+		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script id="chatLog" src="/assets/scripts/chat.js"></script>
+	</div>
+</div>

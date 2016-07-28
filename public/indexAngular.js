@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute']);
+var app = angular.module('myApp', ['ngRoute']);
 
 app.config(function($routeProvider) {
 	$routeProvider
@@ -14,7 +14,7 @@ app.config(function($routeProvider) {
 		.when('/about', {
 			templateUrl: '/webpages/about.html'
 		})
-		.when('/contact' {
+		.when('/contact', {
 			templateUrl: '/webpages/contact.html'
-		});		
+		});
 });
