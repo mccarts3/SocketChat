@@ -11,6 +11,9 @@ app.config(function($routeProvider) {
 		.when('/chat', {				
 			templateUrl: '/webpages/chat.html'
 		})
+		.when('/projects', {
+			templateUrl: '/webpages/projects.html'
+		})
 		.when('/about', {
 			templateUrl: '/webpages/about.html'
 		})
