@@ -11,6 +11,12 @@ body {
 	font: 16px Helvetica, Arial; 
 }
 
+.container {
+	width:95%;
+	padding-top:20px;
+	margin:auto;
+}
+
 .menuBar {
 	background: #777;
 }
