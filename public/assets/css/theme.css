@@ -17,8 +17,44 @@ body {
 	margin:auto;
 }
 
+.container a {
+	text-decoration:none;
+	font: 20px Helvetica, Arial;
+	color:black;
+}
+
+.container a:hover {
+	color:blue;
+}
+
+.project-components {
+	height:auto;
+	width:100%;
+	min-height:400px;
+	display:block;
+}
+
+.description {
+	width:100%;
+	display:inline-block;
+}
+
+.video {
+	width:45%;
+	height:300px;
+	float:right;
+	margin:auto;
+	display:inline-block;
+}
+
+.video iframe {
+	width:100%;
+	height:100%;
+	background:#aaa;
+}
+
 .menuBar {
-	background: #777;
+	background:#777;
 }
 
 .menuBar a {
