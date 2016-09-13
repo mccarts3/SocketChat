@@ -184,3 +184,12 @@ form button:hover {
 	text-indent: 15px;	
 	font-family: Courier;	
 }
+
+#contactList li {
+	padding-top:15px;
+}
+
+#contactList li a {
+	color:#33f;
+	
+}
