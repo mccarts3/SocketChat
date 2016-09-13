@@ -34,6 +34,36 @@ body {
 	display:block;
 }
 
+.welcomeContainer {
+	width:90%;
+	display:inline-block;
+  	overflow: hidden;
+}
+
+.welcomeContainer img {
+    margin-right: 15px;
+    float: left;
+}
+
+.introHeader {
+	padding:40px 0px 0px 50px
+}
+
+#greeting {
+  font: 400 100px/0.8 'Great Vibes', Helvetica, sans-serif;
+  color: #333;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+  padding-bottom:20px;
+}
+
+.introParagraph p {
+  padding-top:30px; 
+}
+
+#signature {
+	padding-left:350px;
+}
+
 .description {
 	width:100%;
 	display:inline-block;
