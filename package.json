@@ -5,6 +5,9 @@
   "main": "app.js",
   "author": "Scott McCartney",
   "license": "UNLICENSED",
+  "scripts": {
+  	"start": "node app.js"
+  }, 
   "dependencies": {
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
