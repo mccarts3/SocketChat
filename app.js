@@ -1,4 +1,5 @@
 // Socket.io chat example
+var cool = require('cool-ascii-faces');
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
@@ -55,6 +56,11 @@ io.on('connection', function(socket){
 	socket.on('disconnect', function() {
 		console.log('User disconnected.');
 	});
+});
+
+//[COOL-ASCII-FACES SETUP]
+app.get('/cool', function(request, response) {
+	response.send(cool());
 });
 
 //[MAIN APP HTML ROUTE]
