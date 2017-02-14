@@ -68,4 +68,4 @@ app.get('/', function (req, res) {
 app.use(express.static('public'));
 app.use('/bower_components', express.static('bower_components'));;
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 5000);
