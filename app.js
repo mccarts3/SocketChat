@@ -58,11 +58,6 @@ io.on('connection', function(socket){
 	});
 });
 
-//[COOL-ASCII-FACES SETUP]
-app.get('/cool', function(request, response) {
-	response.send(cool());
-});
-
 //[DEFINE CONFIG VARS]
 app.get('/times', function(request, response) {
 	var result = '';
@@ -82,6 +77,5 @@ app.get('/', function (req, res) {
 
 //[STATIC ROUTE DEFINITIONS]
 app.use(express.static('public'));
-app.use('/bower_components', express.static('bower_components'));;
 
 app.listen(process.env.PORT || 5000);
