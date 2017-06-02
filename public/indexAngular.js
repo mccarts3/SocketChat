@@ -14,8 +14,8 @@ app.config(function($routeProvider) {
 		.when('/projects', {
 			templateUrl: '/webpages/projects.html'
 		})
-		.when('/about', {
-			templateUrl: '/webpages/about.html'
+		.when('/games', {
+			templateUrl: '/webpages/games.html'
 		})
 		.when('/contact', {
 			templateUrl: '/webpages/contact.html'
