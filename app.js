@@ -1,5 +1,4 @@
 // Socket.io chat example
-var cool = require('cool-ascii-faces');
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);

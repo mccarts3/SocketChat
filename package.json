@@ -1,18 +1,20 @@
 {
   "name": "socket-chat-demo",
-  "version": "0.0.1",
-  "description": "First attempt at a socket.io app.",
+  "version": "0.0.2",
+  "description": "Online resume with socket.io integration",
   "main": "app.js",
   "author": "Scott McCartney",
   "license": "UNLICENSED",
   "scripts": {
     "start": "node app.js"
   },
+  "engines": {
+  	"node": "6.11.1"
+  },
   "dependencies": {
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
     "bootstrap": "^3.3.7",
-    "cool-ascii-faces": "1.3.4",
     "express": "^4.10.2",
     "socket.io": "^1.4.8"
   }
