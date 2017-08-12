@@ -1,6 +1,6 @@
 {
-  "name": "socket-chat-demo",
-  "version": "0.0.2",
+  "name": "online-resume",
+  "version": "0.0.3",
   "description": "Online resume with socket.io integration",
   "main": "app.js",
   "author": "Scott McCartney",
