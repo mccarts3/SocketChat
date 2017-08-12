@@ -12,11 +12,8 @@
 		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 		
 		<!-- Scripts -->
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
 		<script type="text/javascript" src="/assets/scripts/plugins/angular/angular.min.js"></script>
 		<script type="text/javascript" src="/assets/scripts/plugins/angular-route/angular-route.min.js"></script>
-		<!-- <script type="text/javascript" src="/assets/scripts/plugins/bootstrap/js/bootstrap.min.js"></script> -->
 		<script src="/indexAngular.js"></script>
 		
 		<!-- Icons/Images -->
@@ -27,15 +24,24 @@
 	<body class="fixed-top-active" ng-app="myApp">
 		<div class="menuBar">
 	        <ul>
-	            <a href="#/home"><li>HOME</li></a>
-	            <a href="#/chat"><li>CHAT</li></a>
-	            <a href="#/projects"><li>PROJECTS</li></a>
-	            <a href="#/games"><li>GAMES</li></a>
-	            <a href="#/contact"><li>CONTACT</li></a>
+	            <a href="#/home"><li>__icon here__</li></a>
+	            <a href="#/bio"><li>About Me</li></a>
+	            <a href="#/engineering"><li>Engineering</li></a>
+	            <a href="#/java"><li>Java</li></a>
+	            <a href="#/data-structures"><li>C++</li></a>
 	        </ul>
 	    </div>	
-	
-		<div ng-view></div>
-		
+		<div class="body-container">
+			<div class="sectionNav">
+				<ul id="sections">
+					<!-- <li ng-repeat></li> -->
+					<li>Section 1</li>
+					<li>Section 2</li>
+				</ul>
+			</div>
+			<div class="info">
+				<div ng-view></div>
+			</div>
+		</div>
 	</body>
 </html>
