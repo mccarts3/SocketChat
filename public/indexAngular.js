@@ -1,23 +1,14 @@
-var app = angular.module('myApp', ['ngRoute']);
-
-app.config(function($routeProvider) {
-	$routeProvider
-		.when('/', {															// Home page (main route)				
-			templateUrl: '/webpages/home.html'			
-		})
-		.when('/home', {
-			templateUrl: '/webpages/home.html'
-		})
-		.when('/chat', {				
-			templateUrl: '/webpages/chat.html'
-		})
-		.when('/projects', {
-			templateUrl: '/webpages/projects.html'
-		})
-		.when('/games', {
-			templateUrl: '/webpages/games.html'
-		})
-		.when('/contact', {
-			templateUrl: '/webpages/contact.html'
-		});
-});
+(function() {
+	var app = angular.module('myApp', ['ngRoute']);
+	
+	app.config(function($routeProvider) {
+		$routeProvider
+		.when('/', {	templateUrl: '/webpages/home.html'	})	
+		.when('/home', {	templateUrl: '/webpages/home.html'	})
+		.when('/bio', {		templateUrl: '/webpages/about-me.html'	})
+		.when('/java', {	templateUrl: '/webpages/java.html'	})
+		.when('/engineering', {	templateUrl: '/webpages/engineering.html'	})
+		.when('/data-structures', {	templateUrl: '/webpages/data-structures.html'	})
+		.when('/error', {	templateUrl: '/webpages/status/error404.html'	});
+	});
+})();
