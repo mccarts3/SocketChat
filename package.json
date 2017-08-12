@@ -1,6 +1,6 @@
 {
   "name": "online-resume",
-  "version": "0.0.3",
+  "version": "2.0.0",
   "description": "Online resume with socket.io integration",
   "main": "app.js",
   "author": "Scott McCartney",
