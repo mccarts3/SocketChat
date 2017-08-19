@@ -9,7 +9,6 @@
 		
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="/assets/css/theme.css">	
-		<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 		
 		<!-- Scripts -->
 		<script type="text/javascript" src="/assets/scripts/plugins/angular/angular.min.js"></script>
@@ -21,17 +20,17 @@
 	</head>
 	
 	<!-- HTML Body -->	
-	<body class="fixed-top-active" ng-app="myApp">
+	<body class="fixed-top-active" data-ng-app="myApp">
 		<div class="menuBar">
-	        <ul>
-	            <a href="#/home"><li>__icon here__</li></a>
-	            <a href="#/bio"><li>About Me</li></a>
-	            <a href="#/engineering"><li>Engineering</li></a>
-	            <a href="#/java"><li>Java</li></a>
-	            <a href="#/data-structures"><li>C++</li></a>
-	        </ul>
+        	<ul>
+            	<li class="link"><a href="#/home">Home</a></li>
+            	<li class="link"><a href="#/engineering">Engineering</a></li>
+            	<li class="link"><a href="#/java">Java</a></li>
+            	<li class="link"><a href="#/cpp">C++</a></li>
+            	<li class="link" style="float:right"><a class="active" href="#/home">__something__</a></li>
+        	</ul>
 	    </div>	
-		<div class="body-container">
+		<div class="body-container" data-ng-controller='repoCtrl'>
 			<div class="sectionNav">
 				<ul id="sections">
 					<!-- <li ng-repeat></li> -->
@@ -40,8 +39,17 @@
 				</ul>
 			</div>
 			<div class="info">
-				<div ng-view></div>
+				<div data-ng-view></div>
 			</div>
+			<div class="contactPane">
+			<ul>
+				<li>Facebook</li>
+				<li>Twitter</li>
+				<li>Email</li>
+				<li>Github</li>
+				<li>Resume Download</li>
+			</ul>
+		</div>
 		</div>
 	</body>
 </html>

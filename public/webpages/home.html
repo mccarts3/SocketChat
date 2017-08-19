@@ -1,32 +1,6 @@
 <div class="container">	
-	<div class="welcomeContainer">
-		<img src="/assets/icons/meAndBrother.jpg" style="width:300px;height:500px;">
-		<div class="introHeader">
-			<h1 id="greeting" style="align:top">Greetings,</h1>
-		</div>
-		<div class="introParagraph">
-			<p>My name is Scott McCartney, and I'm a Senior at Miami University.  I am graduating in May 2017 with
-			a double major in Computer Engineering and Mathematics.  I decided to make this website as a way to
-			showcase some of my abilities and past projects, as well as to convey more detailed information than a 
-			r&eacute;sum&eacute; can.  The picture on the left is me with my little brother at his graduation.</p>
-			
-			<p>As you can probably see, I'm not a graphic designer.  Instead, my interests are in computer engineering.
-			Some specific areas include embedded systems, computer architecture, and virtual reality. On this website,
-			there are various pages that give you information about some of my past projects that relate to these
-			different areas, some contact information you can use to reach me, my school history, and finally a
-			simple chat application using Socket.io.
-			</p>
-			
-			<p>This website was written using Javascript, specifically Angular for the page redirects to make them
-			more efficient with little to no load time.  Node.js and Socket.io were used to create the chat application.
-			This website is in progress, and I plan to add/refine several things in the future.  I've had a blast making
-			this and hope to fill it with even more amazing projects in the future.
-			</p>
-			
-			<p id="signature">
-				<img src="/assets/icons/signature.png" style="height:125px;width:300px;">
-			</p>
-			
-		</div>
+	<h1>Home page</h1>
+	<div data-ng-repeat="repo in myData">
+		<h5>{{repo.name}}</h5>
 	</div>
 </div>

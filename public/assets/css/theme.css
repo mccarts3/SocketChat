@@ -4,92 +4,63 @@
 	margin: 0; 
 	padding: 0; 
 	box-sizing: border-box; 
-}
-
-body { 
-	min-height:100%;
 	font: 16px Helvetica, Arial; 
 }
 
-.container {
-	width:95%;
-	padding-top:20px;
-	margin:auto;
+.menuBar li a img {
+	height:32px;
+	width:32px;
+	padding-bottom:10px;
 }
 
-.container a {
-	text-decoration:none;
-	font: 20px Helvetica, Arial;
-	color:black;
+.link a:hover {
+	background:#dddddd;
+	color:#111111;
 }
 
-.container a:hover {
-	color:blue;
-}
-
-.container hr {
-	margin:15px 0px 15px 0px;
-}
-
-.welcomeContainer {
-	width:90%;
-	display:inline-block;
-  	overflow: hidden;
-}
-
-.welcomeContainer img {
-    margin-right: 15px;
-    float: left;
-}
-
-.introHeader {
-	padding:40px 0px 0px 50px
-}
-
-#greeting {
-  font: 400 100px/0.8 'Great Vibes', Helvetica, sans-serif;
-  color: #333;
-  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
-  padding-bottom:20px;
-}
-
-.introParagraph p {
-  padding-top:30px; 
-}
-
-#signature {
-	padding-left:350px;
-}
-
-.menuBar {
-	background:#777;
-}
-
-.menuBar a {
-	display: inline-block;
-	text-decoration: none;
+.menuBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
 .menuBar li {
-	color: #fff;
-	font: 20px Arial;
-	padding: 5px 10px 5px 10px;
-	list-style-type: none;
+    float: left;
 }
 
-.menuBar li:hover {
-	background: #aaa;
+.menuBar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-#contactList {
-	padding-left:40px;
+.link li a:hover {
+    background-color: #111;
 }
 
-#contactList li {
-	padding-top:15px;
+.sectionNav {
+	width:250px;
+	float:left;
 }
 
-#contactList li a {
-	color:#33f;
-	
+.info {
+	width:500px;
+	display:inline-block;
+}
+
+.contactPane {
+	width:200px;
+	height:100%;
+	background-color:#333;
+	color:white;
+	float:right;
+}
+
+.contactPane li {
+	display:block;
+	padding:5px 25px 5px 10px;
 }

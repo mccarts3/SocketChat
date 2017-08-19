@@ -9,13 +9,14 @@
     "start": "node app.js"
   },
   "engines": {
-  	"node": "6.11.1"
+    "node": "6.11.1"
   },
   "dependencies": {
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
     "bootstrap": "^3.3.7",
     "express": "^4.10.2",
+    "request-json": "^0.6.2",
     "socket.io": "^1.4.8"
   }
 }
