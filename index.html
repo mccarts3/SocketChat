@@ -27,15 +27,15 @@
             	<li class="link"><a href="#/engineering">Engineering</a></li>
             	<li class="link"><a href="#/java">Java</a></li>
             	<li class="link"><a href="#/cpp">C++</a></li>
+            	<li class="link"><a href="#/web">Web Development</a></li>
+            	<li class="link"><a href="#/work-experience">Work Experience</a></li>
             	<li class="link" style="float:right"><a class="active" href="#/home">__something__</a></li>
         	</ul>
 	    </div>	
 		<div class="body-container" data-ng-controller='repoCtrl'>
 			<div class="sectionNav">
 				<ul id="sections">
-					<!-- <li ng-repeat></li> -->
-					<li>Section 1</li>
-					<li>Section 2</li>
+					<li data-ng-repeat="repo in myData">{{repo.name}}</li>
 				</ul>
 			</div>
 			<div class="info">
